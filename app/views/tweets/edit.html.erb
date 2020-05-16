@@ -1,10 +1,12 @@
-<form action="/tweets/<%= @tweet[:id] %>/edit" method="post">
+<form action="/tweets/<%= @tweet[:id] %>" method="post">
+  <input type="hidden" name="_method" value="patch">
   <%= token_tag %>
   <input type="text"  value="<%= @tweet[:message] %>">
   <input type="submit"  value="save">
 </form>
 
-<form action="/tweets/<%= @tweet[:id] %>/delete" method="post">
+<form action="/tweets/<%= @tweet[:id] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
   <%= token_tag %>
   <input type="submit"  value="Delete">
 </form>
