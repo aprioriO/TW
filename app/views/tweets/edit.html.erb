@@ -1,0 +1,5 @@
+<form action="/tweets/<%= @tweet[:id] %>/edit" method="post">
+  <%= token_tag %>
+  <input type="text"  value="<%= @tweet[:message] %>">
+  <input type="submit"  value="save">
+</form>
