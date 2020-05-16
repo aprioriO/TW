@@ -3,3 +3,8 @@
   <input type="text"  value="<%= @tweet[:message] %>">
   <input type="submit"  value="save">
 </form>
+
+<form action="/tweets/<%= @tweet[:id] %>/delete" method="post">
+  <%= token_tag %>
+  <input type="submit"  value="Delete">
+</form>

@@ -21,4 +21,8 @@ class TweetsController < ApplicationController
   def create
     redirect_to action: index
   end
+
+  def destroy
+    render plain: "Your tweet was deleted"
+  end
 end

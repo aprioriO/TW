@@ -8,7 +8,7 @@ Rails.application.routes.draw do
    get '/tweets/:id/edit', to: 'tweets#edit'
    post '/tweets/:id/edit', to: 'tweets#update'
 
-
+  post '/tweets/:id/delete', to: 'tweets#destroy'
 
 
 end
