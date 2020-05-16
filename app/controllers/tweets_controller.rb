@@ -14,4 +14,11 @@ class TweetsController < ApplicationController
   def update
     redirect_to action: :show, id: params[:id]
   end
+
+  def new
+  end
+
+  def create
+    redirect_to action: index
+  end
 end
