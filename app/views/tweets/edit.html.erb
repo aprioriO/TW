@@ -5,8 +5,4 @@
   <input type="submit"  value="save">
 </form>
 
-<form action="/tweets/<%= @tweet[:id] %>" method="post">
-  <%= method_tag("delete") %>
-  <%= token_tag %>
-  <input type="submit"  value="Delete">
-</form>
+<%= button_to('Delete', "/tweets/#{@tweet[:id]}", method: :delete, data: {confirm: "Are you shure?"}) %>
